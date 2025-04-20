@@ -1,0 +1,7 @@
+name = "dolphin"
+type = "webpack"
+compatibility_date = "2025-04-20"
+
+[site]
+bucket = "./"     # this is where your static site lives (can be ./dist or ./public etc)
+entry-point = "workers-site"
