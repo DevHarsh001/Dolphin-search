@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dolphin Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- frontend  -->
+  <div class="search-container">
+    <div class="logo">🐬<br><span>Dolphin</span></div>
+    <input type="text" id="searchInput" placeholder="Search Dolphin..." autocomplete="off">
+    <button id="searchBtn">Search</button>
+  </div>
+
+
+  <!-- Search js trigger  -->
+  <script>
+    const input = document.getElementById("searchInput");
+    const button = document.getElementById("searchBtn");
+
+    function doSearch() {
+      const query = encodeURIComponent(input.value.trim());
+      if (query) window.location.href = `query.html?q=${query}`;
+    }
+
+    input.addEventListener("keypress", e => {
+      if (e.key === "Enter") doSearch();
+    });
+
+    button.addEventListener("click", doSearch);
+  </script>
+</body>
+</html>
